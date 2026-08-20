@@ -1,0 +1,185 @@
+/* ========================================
+SIDEBAR CONTAINER
+======================================== */
+section[data-testid="stSidebar"]{
+
+    min-width: 270px !important;
+    max-width: 270px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #050b18 0%,
+            #091428 45%,
+            #0f172a 100%
+        );
+
+    border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ========================================
+SIDEBAR CONTENT
+======================================== */
+[data-testid="stSidebarContent"]{
+
+    padding-top: 20px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 20px;
+}
+
+/* ========================================
+SIDEBAR TITLE
+======================================== */
+[data-testid="stSidebarNav"]::before{
+
+    content: "MENU";
+
+    display: block;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 28px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ========================================
+REMOVE DEFAULT STYLE
+======================================== */
+[data-testid="stSidebarNav"] ul{
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+}
+
+/* ========================================
+MENU ITEM
+======================================== */
+[data-testid="stSidebarNav"] li{
+
+    list-style: none;
+
+    margin-bottom: 14px !important;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.03),
+            rgba(255,255,255,0.01)
+        );
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    transition:
+        all 0.25s ease;
+}
+
+/* ========================================
+MENU LINK
+======================================== */
+[data-testid="stSidebarNav"] li a{
+
+    color: #e2e8f0 !important;
+
+    font-size: 15px !important;
+
+    font-weight: 700 !important;
+
+    text-decoration: none !important;
+
+    padding: 14px 18px !important;
+
+    display: block;
+
+    border-radius: 16px;
+
+    transition: all 0.25s ease;
+}
+
+/* ========================================
+HOVER EFFECT
+======================================== */
+[data-testid="stSidebarNav"] li:hover{
+
+    transform: translateX(4px);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(239,68,68,0.18),
+            rgba(127,29,29,0.15)
+        );
+
+    border: 1px solid rgba(239,68,68,0.45);
+
+    box-shadow:
+        0 0 15px rgba(239,68,68,0.18);
+}
+
+/* ========================================
+HOVER TEXT
+======================================== */
+[data-testid="stSidebarNav"] li:hover a{
+
+    color: white !important;
+}
+
+/* ========================================
+ACTIVE MENU
+======================================== */
+[data-testid="stSidebarNav"] li:has(a[aria-current="page"]){
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef4444 0%,
+            #dc2626 50%,
+            #991b1b 100%
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 18px rgba(239,68,68,0.35);
+}
+
+/* ========================================
+ACTIVE TEXT
+======================================== */
+[data-testid="stSidebarNav"] li:has(a[aria-current="page"]) a{
+
+    color: white !important;
+
+    font-weight: 800 !important;
+}
+
+/* ========================================
+SCROLLBAR
+======================================== */
+::-webkit-scrollbar{
+
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background: #475569;
+
+    border-radius: 10px;
+}
